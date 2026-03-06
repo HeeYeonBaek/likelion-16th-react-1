@@ -1,4 +1,7 @@
 import Button from '../components/button/Button'
+import Header from '../components/header/Header'
+import Footer from '../components/footer/Footer'
+import Image from '../components/image/Image'
 import styles from './App.module.css'
 
 // console.log(Button) // React 함수형 컴포넌트(Functional Component)
@@ -13,9 +16,6 @@ import styles from './App.module.css'
  */
 
 export default function App() {
-  // 함수 안에 데이터 선언
-  const size = 120
-
   // return null /* 아무 것도 반환하지 않음 (화면에 아무 것도 그리지 않음) */
 
   // 함수가 JSX(React.ReactNode 타입) 반환
@@ -23,15 +23,7 @@ export default function App() {
   // JSX는 문(statement)이다? ❌ 값(expression, value)이다? ⭕️
   return (
     <>
-      <header className={styles.header}>
-        <h1>
-          <dfn>
-            <abbr title="JavaScript eXtension">JSX</abbr>
-          </dfn>{' '}
-          기초 배우기
-          <Button />
-        </h1>
-      </header>
+      <Header />
       <main className={styles.main}>
         <section>
           <h2>모든 태그는 반드시 닫혀야 합니다.</h2>
@@ -41,12 +33,15 @@ export default function App() {
               <abbr title="Hyper Text Markup Language">HTML</abbr>
               에서는 허용되었던 {'<img>'} 태그도 반드시 닫아야 합니다.
             </dfn>
-            <img
-              src="/react.svg"
-              alt="리액트 로고"
-              width={size}
-              height={size}
-            />
+            {/* Image 위치 */}
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
+            <Image />
           </p>
         </section>
         <section>
@@ -69,12 +64,7 @@ export default function App() {
           <Button />
         </section>
       </main>
-      <footer className={styles.footer}>
-        <small>
-          COPYRIGHT RESERVED. © <abbr title="이듬(EUID)">EUID</abbr>. "완벽보다
-          완주를!"
-        </small>
-      </footer>
+      <Footer />
     </>
   )
 }
