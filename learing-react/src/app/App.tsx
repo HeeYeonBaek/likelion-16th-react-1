@@ -3,6 +3,7 @@ import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
 import Image from '../components/image/Image'
 import styles from './App.module.css'
+import FormField from '../components/form-field/FormField'
 
 // console.log(Button) // React 함수형 컴포넌트(Functional Component)
 
@@ -33,14 +34,6 @@ export default function App() {
               <abbr title="Hyper Text Markup Language">HTML</abbr>
               에서는 허용되었던 {'<img>'} 태그도 반드시 닫아야 합니다.
             </dfn>
-            {/* Image 위치 */}
-            <Image />
-            <Image />
-            <Image />
-            <Image />
-            <Image />
-            <Image />
-            <Image />
             <Image />
           </p>
         </section>
@@ -48,15 +41,8 @@ export default function App() {
           <h2>
             <abbr>HTML</abbr>이 아닙니다.
           </h2>
-          <div className={styles.field}>
-            <label htmlFor="username">이름</label>
-            <input
-              id="username"
-              type="text"
-              className={styles.input}
-              placeholder="이름을 입력하세요."
-            />
-          </div>
+          {/* FormField 컴포넌트 분리 */}
+          <FormField />
         </section>
         <section>
           <h2>웹 표준과 접근성을 준수해야 합니다.</h2>
