@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState, type MouseEvent } from 'react'
 import S from './style.module.css'
 
 export default function EventHandler() {
   // 컴포넌트 상태(기억되는 데이터 값) 관리
   const [count, setCount] = useState(0)
 
-  // 화살표 함수 식
-  const handleIncreaseCount = (e: React.MouseEvent<HTMLButtonElement>) => {
+  // 화살표 함수 식 (이벤트 객체를 사용할 경우, 타입 지정 필요)
+  const handleIncreaseCount = (e: MouseEvent<HTMLButtonElement>) => {
     console.log(e.type + ' 이벤트 발동!')
     const nextCount = count + 1
     setCount(nextCount)
@@ -14,14 +14,6 @@ export default function EventHandler() {
 
   const handlePrintMessage = (message: string) => {
     alert(message)
-  }
-
-  const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(`${e.type} 이벤트 발동!`)
-  }
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(e.type + ' 이벤트 발동!')
   }
 
   return (
@@ -41,8 +33,12 @@ export default function EventHandler() {
           type="button"
           className={`${S.button} ${S.secondary}`}
           // TODO 1: JSX 내부에서 인라인 이벤트 핸들러 추가
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={(e) => {
+            console.log(`${e.type} 이벤트 발동!`)
+          }}
+          onMouseLeave={(e) => {
+            console.log(e.type + ' 이벤트 발동!')
+          }}
         >
           호버(MouseEnter) 이벤트
         </button>
