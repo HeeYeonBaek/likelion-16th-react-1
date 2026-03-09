@@ -1,5 +1,5 @@
 import { Footer, Header, Image, Wrapper } from '@/components'
-import { ConditionalRendering } from '@/learns'
+import { ComponentState } from '@/learns'
 import S from './style.module.css'
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
 
       <div data-placeholder>
         <Wrapper>
-          <ConditionalRendering />
+          <ComponentState />
         </Wrapper>
       </div>
 
