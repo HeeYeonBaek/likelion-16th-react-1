@@ -1,7 +1,9 @@
 .container {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-  h1 {
-    color: #4285f4;
+  [data-placeholder] {
+    flex: 1;
   }
 }
