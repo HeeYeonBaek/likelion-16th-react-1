@@ -17,16 +17,20 @@ export default function RegisterForm() {
   // 폼 상태 데이터를 업데이트할 수 있는 단 하나의 핸들러 함수 활용
   const handleChangeFormState = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    console.log({ name, value })
+    
+    // set 함수 사용법 
+    // 방법 1. nextState 값으로 설정하기
+    // setFormState({
+    //   ...formState,
+    //   [name]: value.trim(),
+    // })
 
-    // 계산된 속성(Computed Property)을 사용해 폼 상태를 수정(update)
-    const nextFormState = {
+    // 방법 2. 업데이트 함수 사용해 이전 값으로 기반으로 상태 값 설정하기
+    setFormState((formState) => ({
       ...formState,
       [name]: value.trim(),
-    }
+    }))
 
-    // 상태 업데이트 요청 (To. 리액트)
-    setFormState(nextFormState)
   }
 
   // 폼 상태의 개별 속성을 제어하는 핸들러 함수 작성 예시
