@@ -18,4 +18,9 @@ export { default as UpdateState } from './UpdateState'
 export { default as ControlledComponent } from './ControlledComponent'
 
 // 6. 스냅샷의 이해 : learn/StateIsSnapshot
+<<<<<<< HEAD
 export { default as StateIsSnapshot } from './StateIsSnapshot'
+=======
+export { default as StateIsSnapshot } from './StateIsSnapshot'
+
+>>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)

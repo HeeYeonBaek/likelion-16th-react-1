@@ -2,9 +2,15 @@
 
   --bg-white: #ffffff;
   --border-light: #edf2f7;
+<<<<<<< HEAD
   --text-dark: #075368;
   --primary-blue: #39b0ce;
   --reset-gray: #b3b9ba;
+=======
+  --text-dark: #2d3748;
+  --primary-blue: #4a90e2;
+  --reset-gray: #a0aec0;
+>>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
 
   padding: 2rem;
   border: 2px solid var(--border-light);

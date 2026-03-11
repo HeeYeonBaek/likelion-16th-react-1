@@ -21,4 +21,8 @@ export default function App() {
       <Footer slogan={'모든 이들에게 행복을!'} />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
