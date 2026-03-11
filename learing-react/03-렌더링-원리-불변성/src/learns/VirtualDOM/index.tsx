@@ -24,12 +24,7 @@ import S from './style.module.css'
  * - 명령적 프로그래밍
  */
 
-<<<<<<< HEAD
 export default function VirtualDOM /* React Element Tree (Memory) */() {
-=======
-
-export default function VirtualDOM() {
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
   const [count, setCount] = useState(0)
 
   const [content, setContent] = useState('')
@@ -40,24 +35,13 @@ export default function VirtualDOM() {
     const nextCount = count + 1
     setCount(nextCount) // 상태 업데이트. 하지만...
 
-<<<<<<< HEAD
     // ----------------------------------------------------------------
-=======
-    // -----------------------------------------------------------------------
-
-
-
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
 
     // 직접 DOM 노드를 찾아가서 전체 HTML을 덮어버림 (강제 조작)
     const vanillaArea = document.getElementById('vanilla-area')
 
     if (vanillaArea) {
-<<<<<<< HEAD
       vanillaArea.innerHTML = /* html */ `
-=======
-      vanillaArea.innerHTML = `
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
         <p class="${S.countDisplay}">
           직접 조작 카운트: <strong>${nextCount}</strong>
         </p>
@@ -71,11 +55,7 @@ export default function VirtualDOM() {
 
     const vanillaDesc = document.querySelector('[data-vanilla-desc]')
     if (vanillaDesc) {
-<<<<<<< HEAD
       vanillaDesc.innerHTML = /* html */ `
-=======
-      vanillaDesc.innerHTML = `
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
       <p data-vanilla-desc class="${S.desc}">
         ⚠️ <strong>전체 HTML이 교체</strong>되어 입력값이 사라졌습니다!
       </p>
@@ -85,7 +65,6 @@ export default function VirtualDOM() {
 
   return (
     <section className={S.container}>
-<<<<<<< HEAD
       <h2 className={S.heading}>
         가상{' '}
         <dfn>
@@ -93,9 +72,6 @@ export default function VirtualDOM() {
         </dfn>
         의 존재 이유
       </h2>
-=======
-      <h2 className={S.heading}>가상 DOM의 존재 이유</h2>
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
 
       <div className={S.comparisonGrid}>
         {/* 리액트 방식 (가상 DOM으로 관리) */}
@@ -107,7 +83,6 @@ export default function VirtualDOM() {
           <input
             type="text"
             className={S.inputField}
-<<<<<<< HEAD
             aria-label="리액트 방식"
             placeholder="내용을 작성하고 버튼을 누르세요."
             value={content}
@@ -123,35 +98,17 @@ export default function VirtualDOM() {
           <p className={S.desc}>
             가상 DOM이 <strong>숫자만</strong> 바꿉니다. 입력창은 그대로
             유지됩니다.
-=======
-            aria-label='리엑트 방식'
-            placeholder="내용을 작성하고 버튼을 누르세요."
-            value={content}
-            onChange={(e)=>setContent(e.target.value)}
-          />
-          <button type="button" className={`${S.button} ${S.reactBtn}`}
-            onClick={()=> setCount((c) => c + 1) }>
-            리액트 업데이트
-          </button>
-          <p className={S.desc}>
-            가상 DOM이 <strong>숫자만</strong> 바꿉니다. 
-            입력창은 그대로 유지됩니다.
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
           </p>
         </article>
 
         {/* 직접 조작 방식 (가상 DOM을 거치지 않음) */}
         <article className={S.box}>
           <h3>
-<<<<<<< HEAD
             직접{' '}
             <dfn>
               <abbr>DOM</abbr>
             </dfn>{' '}
             조작 방식
-=======
-            직접 <dfn><abbr title="Document Object Model">DOM</abbr></dfn> 조작 방식
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
           </h3>
           <div id="vanilla-area">
             <p className={S.countDisplay}>
@@ -163,16 +120,11 @@ export default function VirtualDOM() {
               placeholder="내용을 작성하고 버튼을 누르세요."
             />
           </div>
-<<<<<<< HEAD
           <button
             type="button"
             className={`${S.button} ${S.vanillaBtn}`}
             onClick={handleVanillaUpdate}
           >
-=======
-          <button type="button" className={`${S.button} ${S.vanillaBtn}`}
-          onClick={handleVanillaUpdate}>
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
             직접 <abbr>DOM</abbr> 업데이트
           </button>
           <p data-vanilla-desc className={S.desc}>
@@ -182,8 +134,4 @@ export default function VirtualDOM() {
       </div>
     </section>
   )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5b6aa28 (fix: 중첩 git 제거 후 파일 추적 정상화)
